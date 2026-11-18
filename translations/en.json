@@ -1,0 +1,39 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Shelly Manager",
+        "description": "Manages your Shelly devices in the »Shellys« panel. Devices come from the Shelly integration, mDNS and an optional IP scan."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Shelly Manager is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Shelly Manager",
+        "data": {
+          "scan_ranges": "IP ranges to scan",
+          "mdns": "Browse the network via mDNS",
+          "concurrency": "Concurrent device queries",
+          "full_interval": "Refresh all device info automatically (hours, 0 = off)",
+          "wifi_ssid": "Default Wi-Fi for new devices (SSID)",
+          "wifi_password": "Default Wi-Fi password",
+          "auto_provision": "Automatically provision Shellys found via Bluetooth",
+          "fixed_ip_range": "Range for fixed IPs (UniFi)"
+        },
+        "data_description": {
+          "scan_ranges": "Comma separated, e.g. 192.168.1.0/24. Empty = no scan.",
+          "concurrency": "Higher is faster but loads the Wi-Fi more.",
+          "auto_provision": "Uses the Shelly integration's Bluetooth setup (also via Bluetooth proxies). The device then shows up under »New« in the panel.",
+          "fixed_ip_range": "e.g. 192.168.50.0/24 – fixed addresses are taken from this range. Empty = do not assign fixed IPs."
+        }
+      }
+    },
+    "error": {
+      "invalid_range": "Invalid IP range: {range}"
+    }
+  }
+}

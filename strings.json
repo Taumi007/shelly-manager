@@ -1,0 +1,39 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Shelly Manager einrichten",
+        "description": "Verwaltet deine Shelly-Geräte im Panel »Shellys«. Die Geräte kommen aus der Shelly-Integration, aus mDNS und optional aus einem IP-Scan."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Der Shelly Manager ist bereits eingerichtet."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Shelly Manager",
+        "data": {
+          "scan_ranges": "IP-Bereiche für den Scan",
+          "mdns": "Netzwerk per mDNS durchsuchen",
+          "concurrency": "Gleichzeitige Geräteabfragen",
+          "full_interval": "Alle Geräteinfos automatisch abfragen (Stunden, 0 = aus)",
+          "wifi_ssid": "Standard-WLAN für neue Geräte (SSID)",
+          "wifi_password": "Standard-WLAN – Passwort",
+          "auto_provision": "Über Bluetooth gefundene Shellys automatisch ins WLAN bringen",
+          "fixed_ip_range": "Bereich für feste IPs (UniFi)"
+        },
+        "data_description": {
+          "scan_ranges": "Kommagetrennt, z. B. 192.168.1.0/24. Leer = kein Scan.",
+          "concurrency": "Höhere Werte sind schneller, belasten aber das WLAN.",
+          "auto_provision": "Nutzt die Bluetooth-Einrichtung der Shelly-Integration (auch über Bluetooth-Proxys). Danach erscheint das Gerät im Panel unter »Neu«.",
+          "fixed_ip_range": "z. B. 192.168.50.0/24 – aus diesem Bereich vergibt der Manager feste Adressen. Leer = keine festen IPs vergeben."
+        }
+      }
+    },
+    "error": {
+      "invalid_range": "Ungültiger IP-Bereich: {range}"
+    }
+  }
+}

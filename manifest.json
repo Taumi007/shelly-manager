@@ -1,0 +1,25 @@
+{
+  "domain": "shelly_manager",
+  "name": "Shelly Manager",
+  "after_dependencies": [
+    "shelly",
+    "zeroconf",
+    "switch_as_x",
+    "stromnetz"
+  ],
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [
+    "http",
+    "frontend",
+    "panel_custom",
+    "websocket_api"
+  ],
+  "documentation": "https://github.com/Taumi007/shelly-manager",
+  "integration_type": "service",
+  "iot_class": "local_polling",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.1.0",
+  "issue_tracker": "https://github.com/Taumi007/shelly-manager/issues"
+}
