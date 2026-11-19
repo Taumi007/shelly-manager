@@ -28,3 +28,7 @@ Voraussetzung: die offizielle Shelly-Integration. Optional: UniFi-Network-Integr
 ```bash
 python3 tests/test_model.py
 ```
+
+## Lizenz
+
+MIT – siehe [LICENSE](LICENSE).
